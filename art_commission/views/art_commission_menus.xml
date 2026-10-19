@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <menuitem id="art_commission_root" name="Menu Config Commissions">
+        <menuitem id="art_commission_first_level_menu" name="Configuration">
+            <menuitem id="art_commission_type_menu" action="art_commission_type_action"/>
+            <menuitem id="art_commission_option_menu" action="art_commission_option_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+     <record id="art_commission_type_list" model="ir.ui.view">
+         <field name="name">art.commission.type.list</field>
+         <field name="model">art.commission.type</field>
+         <field name="arch" type="xml">
+             <list string="Art Commission Type" editable="bottom">
+                 <field name="name"/>
+                 <field name="description"/>
+                 <field name="base_price"/>
+                 <field name="active"/>
+             </list>
+         </field>
+     </record>
+
+    <record id="art_commission_type_search" model="ir.ui.view">
+        <field name="name">art.commission.type.search</field>
+        <field name="model">art.commission.type</field>
+        <field name="arch" type="xml">
+            <search string="Commissions TYPE">
+                <field name="name"/>
+                <field name="description"/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+     <record id="art_commission_type_action" model="ir.actions.act_window">
+         <field name="name">Art Commission Type</field>
+         <field name="res_model">art.commission.type</field>
+         <field name="view_mode">list,form</field>
+     </record>
+</odoo>
